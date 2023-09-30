@@ -1,6 +1,12 @@
-<div *ngFor = "let task of tasks">
-    <p>Name: {{ task.name }}</p>
-    <p>description: {{ task.description }}</p>
-    <p>priority: {{ task.priority }}</p>
-    <hr />
-</div>
+  <mat-drawer-container class="containe" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side" openned>
+      <p>Auto-resizing sidenav</p>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle()">
+        Toggle sidenav
+      </button>
+    </div>
+  
+  </mat-drawer-container>
